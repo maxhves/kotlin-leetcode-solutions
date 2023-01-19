@@ -1,4 +1,4 @@
-package medium
+package leetcode.medium
 
 // Problem
 // updateSubrectangle
@@ -41,6 +41,6 @@ class SubrectangleQueries(rectangle: Array<IntArray>) {
         row: Int,
         col: Int,
     ): Int {
-
+        return 0
     }
 }

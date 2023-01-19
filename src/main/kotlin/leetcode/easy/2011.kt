@@ -1,4 +1,4 @@
-package easy
+package leetcode.easy
 
 fun main(args: Array<String>) {
     finalValueAfterOperations(arrayOf("--X", "X++", "X++"))

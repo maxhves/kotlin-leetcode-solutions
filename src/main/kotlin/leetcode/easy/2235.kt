@@ -1,4 +1,4 @@
-package easy
+package leetcode.easy
 
 fun main(args: Array<String>) {
     sum(12, 5)
