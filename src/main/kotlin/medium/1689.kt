@@ -1,4 +1,4 @@
-package easy
+package medium
 
 fun main(args: Array<String>) {
     minPartitions("32")
