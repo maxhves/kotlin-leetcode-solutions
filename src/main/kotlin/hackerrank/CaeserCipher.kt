@@ -3,21 +3,19 @@ package hackerrank
 fun caesarCipher(s: String, k: Int): String {
     // s - the input string
     // k - the alphabet rotation factor
+    val sanitizedFactor = k % 26
     val alphabet =  "abcdefghijklmnopqrstuvwxyz"
-    val rotatedAlphabet = alphabet.slice(k..alphabet.lastIndex) + alphabet.slice(0 until k)
-
-    // val adjustedIndex = k % 26
-
+    val rotatedAlphabet = alphabet.slice(sanitizedFactor..alphabet.lastIndex) + alphabet.slice(0 until sanitizedFactor)
     var encryptedString = ""
 
-    for (char in s.lowercase()) {
+    for (char in s) {
         var encryptedChar = '-'
 
-        if (char.isLetter()) {
-            encryptedChar = rotatedAlphabet[alphabet.indexOf(char.lowercaseChar())]
+        if (char in 'a'..'z' || char in 'A'..'Z') {
+            encryptedChar = rotatedAlphabet[alphabet.indexOf(char.toLowerCase())]
 
             if (char.isUpperCase()) {
-                 encryptedChar = encryptedChar.uppercaseChar()
+                encryptedChar = encryptedChar.toUpperCase()
             }
         } else {
             encryptedChar = char
