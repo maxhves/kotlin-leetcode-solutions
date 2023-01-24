@@ -39,6 +39,9 @@ fun diagonalDifference(arr: Array<Array<Int>>): Int {
         rightLeftSum += arr[i][arr.lastIndex - i]
     }
 
+    // Possible alternative with standard library functions
+    // return maxOf(leftRightSum, rightLeftSum) + minOf(leftRightSum, rightLeftSum)
+
     return if (leftRightSum > rightLeftSum) leftRightSum - rightLeftSum else rightLeftSum - leftRightSum
 
     // Time complexity: O(n)
