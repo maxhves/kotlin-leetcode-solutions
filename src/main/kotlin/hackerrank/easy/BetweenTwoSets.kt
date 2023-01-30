@@ -1,7 +1,7 @@
 package hackerrank.easy
 
 fun getTotalX(a: Array<Int>, b: Array<Int>): Int {
-
+    return 0
 }
 
 fun main(args: Array<String>) {
