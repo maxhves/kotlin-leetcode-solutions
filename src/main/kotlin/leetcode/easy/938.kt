@@ -1,5 +1,6 @@
 package leetcode.easy
 
+import leetcode.easy.common.TreeNode
 import java.util.*
 
 //region Problem
@@ -24,11 +25,6 @@ import java.util.*
 //endregion
 
 //region Solution
-
-class TreeNode(var `val`: Int) {
-    var left: TreeNode? = null
-    var right: TreeNode? = null
-}
 
 private fun main() {
     rangeSumBST(
