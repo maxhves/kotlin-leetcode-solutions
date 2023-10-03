@@ -1,7 +1,5 @@
 package datastructures
 
-import kotlin.math.floor
-
 private fun main() {
     val result = binarySearch(list = intArrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9), target = 8)
     println(result)
