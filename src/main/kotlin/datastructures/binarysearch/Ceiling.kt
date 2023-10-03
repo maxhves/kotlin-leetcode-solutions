@@ -1,17 +1,23 @@
-package datastructures
+package datastructures.binarysearch
 
 private fun main() {
-    val numbers = intArrayOf(-18, -12, -4, 0, 2, 3, 4, 15, 16, 18, 22)
-    val target = 22
-    val answer = binarySearch(numbers, target)
+    val numbers = intArrayOf(2, 3, 5, 9, 14, 16, 18)
+    val target = 15
+    val answer = ceilingOfTarget(numbers, target)
 
     println(answer)
 }
 
 /**
- * Return the index of [target] else return -1 if not found.
+ * Return the smallest element that is greater than or equal to target.
  */
-fun binarySearch(array: IntArray, target: Int): Int {
+fun ceilingOfTarget(array: IntArray, target: Int): Int {
+    // It's possible that the target is greater than the greatest number
+    // in the array. If so return -1.
+    if (target > array[array.lastIndex]) {
+        return -1
+    }
+
     var start = 0
     var end = array.lastIndex
 
@@ -30,5 +36,5 @@ fun binarySearch(array: IntArray, target: Int): Int {
         }
     }
 
-    return -1
+    return array[start]
 }

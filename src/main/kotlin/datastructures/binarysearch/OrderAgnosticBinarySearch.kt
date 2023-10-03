@@ -1,4 +1,4 @@
-package datastructures
+package datastructures.binarysearch
 
 private fun main() {
     val numbers = intArrayOf(-18, -12, -4, 0, 2, 3, 4, 15, 16, 18, 22)
