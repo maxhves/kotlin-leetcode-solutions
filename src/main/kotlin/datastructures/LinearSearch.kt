@@ -5,6 +5,24 @@ private fun main() {
     val target = 19
 
     println(linearSearch(numbers, target))
+    println(linearSearchGetElement(numbers, target))
+}
+
+/**
+ * Search the target and return the element itself.
+ */
+fun linearSearchGetElement(array: IntArray, target: Int): Int? {
+    if (array.isEmpty()) {
+        return null
+    }
+
+    for (element in array) {
+        if (element == target) {
+            return element
+        }
+    }
+
+    return null
 }
 
 /**
