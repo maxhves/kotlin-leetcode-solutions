@@ -1,25 +1,34 @@
 package datastructures
 
 private fun main() {
-    val result = binarySearch(list = intArrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9), target = 8)
-    println(result)
+    val numbers = intArrayOf(-18, -12, -4, 0, 2, 3, 4, 15, 16, 18, 22)
+    val target = 22
+    val answer = binarySearch(numbers, target)
+
+    println(answer)
 }
 
-fun binarySearch(list: IntArray, target: Int): Int? {
-    var first = 0
-    var last = list.lastIndex
+/**
+ * Return the index of [target] else return -1 if not found.
+ */
+fun binarySearch(array: IntArray, target: Int): Int {
+    var start = 0
+    var end = array.lastIndex
 
-    while (first <= last) {
-        val midpoint: Int = (first + last) / 2
+    while (start <= end) {
+        // Find the middle element
+        // This could be larger than the maximum integer size.
+        // val midpoint = (start + end) / 2
+        val midpoint = start + (end - start) / 2
 
-        if (list[midpoint] == target) {
-            return midpoint
-        } else if (list[midpoint] < target) {
-            first = midpoint + 1
+        if (target < array[midpoint]) {
+            end = midpoint - 1
+        } else if (target > array[midpoint]) {
+            start = midpoint + 1
         } else {
-            last = midpoint - 1
+            return midpoint
         }
     }
 
-    return null
+    return -1
 }
