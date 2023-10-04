@@ -1,6 +1,6 @@
 package leetcode.easy
 
-import leetcode.easy.common.TreeNode
+import leetcode.common.TreeNode
 
 //region Problem
 

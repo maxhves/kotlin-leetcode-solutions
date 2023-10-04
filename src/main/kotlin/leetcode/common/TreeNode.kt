@@ -1,4 +1,4 @@
-package leetcode.easy.common
+package leetcode.common
 
 class TreeNode(var `val`: Int) {
     var left: TreeNode? = null
