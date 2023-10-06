@@ -10,7 +10,7 @@ private fun main() {
     println(search(matrix = array, target = 37).joinToString())
 }
 
-fun search(matrix: Array<IntArray>, target: Int): IntArray {
+private fun search(matrix: Array<IntArray>, target: Int): IntArray {
     var row = 0
     var column = matrix.lastIndex
 
