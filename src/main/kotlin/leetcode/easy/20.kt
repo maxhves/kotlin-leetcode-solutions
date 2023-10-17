@@ -4,13 +4,18 @@ import java.util.*
 
 //region Problem
 
-
+/**
+ * Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine
+ * if the input string is valid.
+ */
 
 //endregion
 
 //region Steps to solve
 
-
+/**
+ * ...
+ */
 
 //endregion
 
