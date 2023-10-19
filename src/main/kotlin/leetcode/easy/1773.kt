@@ -40,7 +40,7 @@ private fun main() {
     )
 }
 
-fun countMatches(items: List<List<String>>, ruleKey: String, ruleValue: String): Int {
+private fun countMatches(items: List<List<String>>, ruleKey: String, ruleValue: String): Int {
     val ruleKeyToIndex = mapOf("type" to 0, "color" to 1, "name" to 2)
     val indexToMatch = ruleKeyToIndex[ruleKey] ?: 0
 

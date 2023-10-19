@@ -1,6 +1,6 @@
 package hackerrank
 
-fun lonelyinteger(a: Array<Int>): Int {
+private fun lonelyinteger(a: Array<Int>): Int {
     // Problem
     // Given an array of integers, where
     // - All elements but one occur twice
@@ -21,7 +21,7 @@ fun lonelyinteger(a: Array<Int>): Int {
     return array[0]
 }
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     val n = readLine()!!.trim().toInt()
 
     val a = readLine()!!.trimEnd().split(" ").map{ it.toInt() }.toTypedArray()

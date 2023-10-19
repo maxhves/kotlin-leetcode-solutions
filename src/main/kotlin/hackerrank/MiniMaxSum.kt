@@ -4,7 +4,7 @@ import java.math.BigInteger
 import java.util.*
 
 // Initial
-fun miniMaxSum(arr: Array<Int>): Unit {
+private fun miniMaxSum(arr: Array<Int>): Unit {
     // Problem
     // Given 5 positive integers;
     // - Find the minimum and maximum values that can be calculated by summing exactly 4 of the 5 integers
@@ -26,7 +26,7 @@ fun miniMaxSum(arr: Array<Int>): Unit {
 }
 
 // Better
-fun miniMaxSum2(arr: Array<Int>) {
+private fun miniMaxSum2(arr: Array<Int>) {
     var sum: Long = arr[0].toLong()
     var min = arr[0]
     var max = arr[0]
@@ -50,7 +50,7 @@ fun miniMaxSum2(arr: Array<Int>) {
     println("${sum - max} ${sum - min}")
 }
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
 
     val arr = readLine()!!.trimEnd().split(" ").map{ it.toInt() }.toTypedArray()
 

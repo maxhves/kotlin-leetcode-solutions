@@ -1,6 +1,6 @@
 package hackerrank
 
-fun towerBreakers(n: Int, m: Int): Int {
+private fun towerBreakers(n: Int, m: Int): Int {
     // *n* towers
     // Each tower is of height *m*
 
@@ -11,7 +11,7 @@ fun towerBreakers(n: Int, m: Int): Int {
     return if (m == 1 || n % 2 == 0) 2 else 1
 }
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     val t = readLine()!!.trim().toInt()
 
     for (tItr in 1..t) {

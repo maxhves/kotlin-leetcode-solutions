@@ -1,6 +1,6 @@
 package hackerrank
 
-fun legoBlocks(n: Int, m: Int): Int {
+private fun legoBlocks(n: Int, m: Int): Int {
     // Brick configs
     //  d	h	w
     //  1	1	1
@@ -16,7 +16,7 @@ fun legoBlocks(n: Int, m: Int): Int {
     return 0
 }
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     val t = readLine()!!.trim().toInt()
 
     for (tItr in 1..t) {

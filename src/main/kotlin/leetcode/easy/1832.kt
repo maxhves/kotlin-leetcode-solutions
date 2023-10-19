@@ -49,7 +49,7 @@ private fun main() {
  * Runtime: 133ms (beats 95.08%).
  * Memory: 34.37mb (beats 72.13%).
  */
-fun checkIfPangram(sentence: String): Boolean {
+private fun checkIfPangram(sentence: String): Boolean {
     if (sentence.length < 26) {
         return false
     }
@@ -68,7 +68,7 @@ fun checkIfPangram(sentence: String): Boolean {
 /**
  * Very interesting alternative trick.
  */
-fun checkIfPangramAlternative(sentence: String): Boolean {
+private fun checkIfPangramAlternative(sentence: String): Boolean {
     return sentence.toSet().size == 26
 }
 

@@ -2,7 +2,7 @@ package hackerrank.easy
 
 import java.util.*
 
-fun countingValleys(steps: Int, path: String): Int {
+private fun countingValleys(steps: Int, path: String): Int {
     // DDUUUUDD
     // -1, -1, +1, +1, +1, +1, -1, -1
 
@@ -30,7 +30,7 @@ fun countingValleys(steps: Int, path: String): Int {
     return valleyCount
 }
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     val steps = readLine()!!.trim().toInt()
 
     val path = readLine()!!

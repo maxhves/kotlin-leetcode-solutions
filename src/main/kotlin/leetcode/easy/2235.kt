@@ -1,6 +1,6 @@
 package leetcode.easy
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     sum(12, 5)
     sum(-10, 4)
 }

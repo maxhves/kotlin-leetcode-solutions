@@ -27,12 +27,12 @@ package leetcode.easy
 
 //region Solution
 
-fun main() {
+private fun main() {
     sumIndicesWithKSetBits(nums = listOf(5, 10, 1, 5, 2), k = 1)
     sumIndicesWithKSetBits(nums = listOf(4, 3, 2, 1), k = 2)
 }
 
-fun sumIndicesWithKSetBits(nums: List<Int>, k: Int): Int {
+private fun sumIndicesWithKSetBits(nums: List<Int>, k: Int): Int {
     var setBitIndexSum = 0
 
     for (i in nums.indices) {

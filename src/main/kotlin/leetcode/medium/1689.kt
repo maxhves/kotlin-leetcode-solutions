@@ -1,6 +1,6 @@
 package leetcode.medium
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     minPartitions("32")
 }
 

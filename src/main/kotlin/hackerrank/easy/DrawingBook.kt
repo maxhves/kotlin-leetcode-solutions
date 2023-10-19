@@ -1,6 +1,6 @@
 package hackerrank.easy
 
-fun pageCount(n: Int, p: Int): Int {
+private fun pageCount(n: Int, p: Int): Int {
     // n: Number of pages
     // p: Page to go to
     return if (p > (n / 2 )) {
@@ -10,7 +10,7 @@ fun pageCount(n: Int, p: Int): Int {
     }
 }
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     val n = readLine()!!.trim().toInt()
 
     val p = readLine()!!.trim().toInt()

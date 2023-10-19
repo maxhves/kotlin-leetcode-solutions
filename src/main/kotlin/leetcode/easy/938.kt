@@ -34,7 +34,7 @@ private fun main() {
     )
 }
 
-fun rangeSumBST(root: TreeNode?, low: Int, high: Int): Int {
+private fun rangeSumBST(root: TreeNode?, low: Int, high: Int): Int {
     if (root == null) return 0
 
     var sum = 0
@@ -63,7 +63,7 @@ fun rangeSumBST(root: TreeNode?, low: Int, high: Int): Int {
 /**
  * Alternative solution
  */
-fun rangeSumBSTAlternative(root: TreeNode?, low: Int, high: Int): Int {
+private fun rangeSumBSTAlternative(root: TreeNode?, low: Int, high: Int): Int {
     if (root == null) return 0
 
     var answer = 0

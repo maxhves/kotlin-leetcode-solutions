@@ -1,6 +1,6 @@
 package hackerrank
 
-fun plusMinus(arr: Array<Int>): Unit {
+private fun plusMinus(arr: Array<Int>): Unit {
     // Write your code here
 
     // Print the following lines
@@ -29,7 +29,7 @@ fun plusMinus(arr: Array<Int>): Unit {
     println(formatArg.format(zeroCount / arraySize))
 }
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     val n = readLine()!!.trim().toInt()
 
     val arr = readLine()!!.trimEnd().split(" ").map{ it.toInt() }.toTypedArray()

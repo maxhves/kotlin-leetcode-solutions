@@ -35,7 +35,7 @@ private fun main() {
 
 }
 
-fun findInMountainArray(target: Int, mountainArray: MountainArray): Int {
+private fun findInMountainArray(target: Int, mountainArray: MountainArray): Int {
     val peak = findPeakInMountain(mountainArray)
     val matchInStart = findTargetInArray(mountainArray, target, peak, true)
 

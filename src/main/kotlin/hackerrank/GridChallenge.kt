@@ -1,6 +1,6 @@
 package hackerrank
 
-fun gridChallenge(grid: Array<String>): String {
+private fun gridChallenge(grid: Array<String>): String {
     // Problem
     // Given a square grid of characters in the range ascii[a-z]
     // - Rearrange elements of each row alphabetically, ascending
@@ -37,7 +37,7 @@ fun gridChallenge(grid: Array<String>): String {
     return "YES"
 }
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     val t = readLine()!!.trim().toInt()
 
     for (tItr in 1..t) {

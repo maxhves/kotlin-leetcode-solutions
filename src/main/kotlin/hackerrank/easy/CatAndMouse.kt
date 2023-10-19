@@ -3,7 +3,7 @@ package hackerrank.easy
 import java.lang.Math.abs
 import java.util.*
 
-fun catAndMouse(x: Int, y: Int, z: Int): String {
+private fun catAndMouse(x: Int, y: Int, z: Int): String {
     // x: Cat A
     // y: Cat B
     // z: Mouse C
@@ -19,7 +19,7 @@ fun catAndMouse(x: Int, y: Int, z: Int): String {
     }
 }
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     val scan = Scanner(System.`in`)
 
     val q = scan.nextLine().trim().toInt()

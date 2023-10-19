@@ -2,7 +2,7 @@ package hackerrank.easy
 
 import kotlin.math.roundToInt
 
-fun repeatedString(s: String, n: Long): Long {
+private fun repeatedString(s: String, n: Long): Long {
     // aba
     // aba aba aba a
     val fullLengths = (n / s.length)
@@ -14,7 +14,7 @@ fun repeatedString(s: String, n: Long): Long {
     return (fullLengthCount * fullLengths) + leftOverCount
 }
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     val s = readLine()!!
 
     val n = readLine()!!.trim().toLong()

@@ -34,7 +34,7 @@ private fun main() {
     nextGreatestLetter(letters = charArrayOf('c', 'f', 'j'), target = 'a')
 }
 
-fun nextGreatestLetter(letters: CharArray, target: Char): Char {
+private fun nextGreatestLetter(letters: CharArray, target: Char): Char {
     var start = 0
     var end = letters.lastIndex
 

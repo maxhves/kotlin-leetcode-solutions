@@ -1,6 +1,6 @@
 package hackerrank.easy
 
-fun designerPdfViewer(h: Array<Int>, word: String): Int {
+private fun designerPdfViewer(h: Array<Int>, word: String): Int {
     val heights = IntArray(word.length)
 
     for ((i, x) in word.withIndex()) {
@@ -10,7 +10,7 @@ fun designerPdfViewer(h: Array<Int>, word: String): Int {
     return heights.max() * word.length
 }
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
 
     val h = readLine()!!.trimEnd().split(" ").map{ it.toInt() }.toTypedArray()
 

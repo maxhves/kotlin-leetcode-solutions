@@ -1,6 +1,6 @@
 package hackerrank.easy
 
-fun libraryFine(d1: Int, m1: Int, y1: Int, d2: Int, m2: Int, y2: Int): Int {
+private fun libraryFine(d1: Int, m1: Int, y1: Int, d2: Int, m2: Int, y2: Int): Int {
     // If return year is bigger than the due year
     return if (y1 > y2) {
         10000
@@ -19,7 +19,7 @@ fun libraryFine(d1: Int, m1: Int, y1: Int, d2: Int, m2: Int, y2: Int): Int {
     }
 }
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     val first_multiple_input = readLine()!!.trimEnd().split(" ")
 
     val d1 = first_multiple_input[0].toInt()

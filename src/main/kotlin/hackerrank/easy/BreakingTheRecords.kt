@@ -1,6 +1,6 @@
 package hackerrank.easy
 
-fun breakingRecords(scores: Array<Int>): Array<Int> {
+private fun breakingRecords(scores: Array<Int>): Array<Int> {
     var currentMin = scores[0]
     var currentMax = scores[0]
     val maxMinCount = IntArray(2)
@@ -20,7 +20,7 @@ fun breakingRecords(scores: Array<Int>): Array<Int> {
     return maxMinCount.toTypedArray()
 }
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     val n = readLine()!!.trim().toInt()
 
     val scores = readLine()!!.trimEnd().split(" ").map{ it.toInt() }.toTypedArray()

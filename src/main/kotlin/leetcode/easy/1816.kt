@@ -32,7 +32,7 @@ private fun main() {
     truncateSentence(s = "What is the solution to this problem", k = 4)
 }
 
-fun truncateSentence(s: String, k: Int): String {
+private fun truncateSentence(s: String, k: Int): String {
     var result = ""
     var counter = 0
 

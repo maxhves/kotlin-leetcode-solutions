@@ -29,7 +29,7 @@ private fun main() {
     println(countDigitsOptimized(num = 121))
 }
 
-fun countDigits(num: Int): Int {
+private fun countDigits(num: Int): Int {
     var tempNumber = num
     val digitArray = arrayListOf<Int>()
     var resultCount = 0
@@ -48,7 +48,7 @@ fun countDigits(num: Int): Int {
     return resultCount
 }
 
-fun countDigitsOptimized(num: Int): Int {
+private fun countDigitsOptimized(num: Int): Int {
     return num.toString().map { it.digitToInt() }.fold(0) { acc, i ->
         if (num % i == 0) {
             acc + 1

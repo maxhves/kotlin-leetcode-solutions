@@ -51,7 +51,7 @@ private fun main() {
  * Runtime: 175ms (beats 32.56%).
  * Memory: 39.66mb (beats 9.30%).
  */
-fun sortSentence(s: String): String {
+private fun sortSentence(s: String): String {
     val wordArray = s.split(' ').sortedBy { it.last() }
     return wordArray.joinToString(separator = " ") { it.dropLast(1) }
 }
@@ -62,7 +62,7 @@ fun sortSentence(s: String): String {
  * Runtime: 145ms (beats 97.67%).
  * Memory: 37.68mb (beats 69.77%).
  */
-fun sortSentenceOptimized(s: String): String {
+private fun sortSentenceOptimized(s: String): String {
     val wordArray = s.split(" ").associate { it.last().digitToInt() to it.dropLast(1) }
     return wordArray.toSortedMap().values.joinToString(" ")
 }

@@ -30,7 +30,7 @@ private fun main() {
     smallestEvenMultiple(n = 6)
 }
 
-fun smallestEvenMultiple(n: Int): Int {
+private fun smallestEvenMultiple(n: Int): Int {
     if (n % 2 == 0) {
         println("Smallest even multiple is: $n")
         return n
@@ -53,7 +53,7 @@ fun smallestEvenMultiple(n: Int): Int {
 /**
  * Alternate short solution.
  */
-fun smallestEventMultipleAlternative(n: Int): Int {
+private fun smallestEventMultipleAlternative(n: Int): Int {
     return if (n % 2 == 0) n else n * 2
 }
 

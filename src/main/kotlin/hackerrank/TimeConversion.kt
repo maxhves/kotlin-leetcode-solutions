@@ -3,7 +3,7 @@ package hackerrank
 import java.text.SimpleDateFormat
 
 // Initial solution
-fun timeConversion(s: String): String {
+private fun timeConversion(s: String): String {
     // Problem
     // Given a 12-hour AM/PM format convert it to military (24-hour) time
 
@@ -27,13 +27,13 @@ fun timeConversion(s: String): String {
 }
 
 // Better solution
-fun timeConversion2(s: String): String {
+private fun timeConversion2(s: String): String {
     val inputFormat = SimpleDateFormat("hh:mm:ss a")
     val outputFormat = SimpleDateFormat("HH:mm:ss")
     return outputFormat.format(inputFormat.parse(s))
 }
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     val s = readLine()!!
 
     val result = timeConversion2(s)

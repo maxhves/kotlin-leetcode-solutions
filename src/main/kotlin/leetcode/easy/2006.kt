@@ -43,7 +43,7 @@ private fun main() {
     countKDifference(nums = intArrayOf(1, 2, 2, 1), k = 1)
 }
 
-fun countKDifference(nums: IntArray, k: Int): Int {
+private fun countKDifference(nums: IntArray, k: Int): Int {
     var pairs = 0
 
     for (i in nums.indices) {
@@ -65,7 +65,7 @@ fun countKDifference(nums: IntArray, k: Int): Int {
  * Runtime: 189ms (beats 47.62%).
  * Memory: 36.81mb (beats 71.43%).
  */
-fun countKDifferenceOptimized(nums: IntArray, k: Int): Int {
+private fun countKDifferenceOptimized(nums: IntArray, k: Int): Int {
     val numCount = HashMap<Int, Int>()
     var pairs = 0
 

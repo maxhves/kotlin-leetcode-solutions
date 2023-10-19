@@ -33,7 +33,7 @@ private fun main() {
     findCenter(edges = arrayOf(intArrayOf(1, 2), intArrayOf(2, 3), intArrayOf(4, 2)))
 }
 
-fun findCenter(edges: Array<IntArray>): Int {
+private fun findCenter(edges: Array<IntArray>): Int {
     val hashMap = HashMap<Int, Int>()
 
     for (node in edges) {
@@ -47,7 +47,7 @@ fun findCenter(edges: Array<IntArray>): Int {
     return hashMap.maxBy { it.value }.key
 }
 
-fun findCenterAlternative(edges: Array<IntArray>): Int {
+private fun findCenterAlternative(edges: Array<IntArray>): Int {
     if (edges[0][0] == edges[1][1]) {
         return edges [0][0]
     }

@@ -51,7 +51,7 @@ private fun main() {
     println(subrectangleQueries.getValue(0, 2))
 }
 
-class SubrectangleQueries(val rectangle: Array<IntArray>) {
+private class SubrectangleQueries(val rectangle: Array<IntArray>) {
     fun updateSubrectangle(row1: Int, col1: Int, row2: Int, col2: Int, newValue: Int) {
         for (row  in 0 until rectangle.size) {
             if (row in row1..row2) {

@@ -34,7 +34,7 @@ private fun main() {
     minimumSum(num = 4009)
 }
 
-fun minimumSum(num: Int): Int {
+private fun minimumSum(num: Int): Int {
     var tempNum = num
     val digits = arrayListOf<Int>()
 

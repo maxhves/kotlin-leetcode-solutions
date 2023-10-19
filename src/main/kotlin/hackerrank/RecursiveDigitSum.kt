@@ -1,6 +1,6 @@
 package hackerrank
 
-fun superDigit(n: String, k: Int): Int {
+private fun superDigit(n: String, k: Int): Int {
     // Problem
     // We define super digit of an integer *x* using the following rules;
     // Given an integer, we need to find the super digit of the integer.
@@ -24,7 +24,7 @@ fun superDigit(n: String, k: Int): Int {
     return superString.toInt()
 }
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     val first_multiple_input = readLine()!!.trimEnd().split(" ")
 
     val n = first_multiple_input[0]

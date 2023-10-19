@@ -1,6 +1,6 @@
 package hackerrank.easy
 
-fun pickingNumbers(a: Array<Int>): Int {
+private fun pickingNumbers(a: Array<Int>): Int {
     // Find the longest sub-array where the absolute difference
     // between any two elements is <= 1
     a.sort()
@@ -19,7 +19,7 @@ fun pickingNumbers(a: Array<Int>): Int {
     return subArraySizes.max()
 }
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     val n = readLine()!!.trim().toInt()
 
     val a = readLine()!!.trimEnd().split(" ").map{ it.toInt() }.toTypedArray()

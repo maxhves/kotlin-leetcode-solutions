@@ -3,7 +3,7 @@ package hackerrank
 import java.util.TreeSet
 
 // Initial solution
-fun noPrefix(words: Array<String>): Unit {
+private fun noPrefix(words: Array<String>): Unit {
     // Check if a word is a prefix of another word
     // If so then it is a BAD SET
     // If no word is a prefix of no other word then GOOD SET
@@ -39,7 +39,7 @@ fun noPrefix(words: Array<String>): Unit {
 }
 
 // Better solution
-fun noPrefix2(words: Array<String>): Unit {
+private fun noPrefix2(words: Array<String>): Unit {
     // Create a tree set and add first word
     val wordTree = TreeSet<String>()
     val firstWord = words[0]
@@ -81,7 +81,7 @@ fun noPrefix2(words: Array<String>): Unit {
     println("GOOD SET")
 }
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     val n = readLine()!!.trim().toInt()
 
     val words = Array<String>(n, { "" })

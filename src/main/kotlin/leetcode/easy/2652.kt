@@ -30,7 +30,7 @@ private fun main() {
     sumOfMultiples(n = 10)
 }
 
-fun sumOfMultiples(n: Int): Int {
+private fun sumOfMultiples(n: Int): Int {
     val sum: Int = (1..n)
         .fold(0) { acc, it ->
             if (it % 3 == 0 || it % 5 == 0 || it % 7 == 0) {

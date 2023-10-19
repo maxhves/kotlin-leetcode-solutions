@@ -1,6 +1,6 @@
 package hackerrank
 
-fun diagonalDifference(arr: Array<Array<Int>>): Int {
+private fun diagonalDifference(arr: Array<Array<Int>>): Int {
     // Problem
     // Given a square matrix
     // - Calculate the absolute difference between the sums of its diagonals
@@ -48,7 +48,7 @@ fun diagonalDifference(arr: Array<Array<Int>>): Int {
     // Space complexity: O(1)
 }
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     val n = readLine()!!.trim().toInt()
 
     val arr = Array<Array<Int>>(n, { Array<Int>(n, { 0 }) })

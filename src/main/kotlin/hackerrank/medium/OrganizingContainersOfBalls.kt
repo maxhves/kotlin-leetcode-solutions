@@ -2,7 +2,7 @@ package hackerrank.medium
 
 import java.util.*
 
-fun organizingContainers(container: Array<Array<Int>>): String {
+private fun organizingContainers(container: Array<Array<Int>>): String {
     // Number of balls in each container
     val containerSizes = IntArray(container.size)
 
@@ -38,7 +38,7 @@ fun organizingContainers(container: Array<Array<Int>>): String {
     return "Possible"
 }
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     val q = readLine()!!.trim().toInt()
 
     for (qItr in 1..q) {

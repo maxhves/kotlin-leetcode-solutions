@@ -4,7 +4,7 @@ import java.util.PriorityQueue
 
 // Initial solution
 // Unfortunately solution is too slow...
-fun cookies(k: Int, A: Array<Int>): Int {
+private fun cookies(k: Int, A: Array<Int>): Int {
     // sweetness = (1 * least sweet cookie + 2 * 2nd least sweet cookie)
 
     // Case
@@ -40,7 +40,7 @@ fun cookies(k: Int, A: Array<Int>): Int {
 }
 
 // Better solution
-fun cookies2(k: Int, A: Array<Int>): Int {
+private fun cookies2(k: Int, A: Array<Int>): Int {
     val sortedQueue = PriorityQueue<Int>()
     sortedQueue.addAll(A)
 
@@ -61,7 +61,7 @@ fun cookies2(k: Int, A: Array<Int>): Int {
     return numberOfOperations
 }
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     val first_multiple_input = readLine()!!.trimEnd().split(" ")
 
     val n = first_multiple_input[0].toInt()

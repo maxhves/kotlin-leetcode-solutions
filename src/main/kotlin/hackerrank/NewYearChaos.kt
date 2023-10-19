@@ -1,6 +1,6 @@
 package hackerrank
 
-fun minimumBribes(q: Array<Int>): Unit {
+private fun minimumBribes(q: Array<Int>): Unit {
     // Case
     // 2 1 5 3 4
     // 5 moved 2 times
@@ -54,7 +54,7 @@ fun minimumBribes(q: Array<Int>): Unit {
     println(totalBribes)
 }
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     val t = readLine()!!.trim().toInt()
 
     for (tItr in 1..t) {

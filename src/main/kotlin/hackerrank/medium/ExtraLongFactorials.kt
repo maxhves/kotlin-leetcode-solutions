@@ -2,7 +2,7 @@ package hackerrank.medium
 
 import java.math.BigInteger
 
-fun extraLongFactorials(n: Int): Unit {
+private fun extraLongFactorials(n: Int): Unit {
     var factorial: BigInteger = BigInteger.ZERO
 
     for (i in n downTo 1) {
@@ -12,7 +12,7 @@ fun extraLongFactorials(n: Int): Unit {
     println(factorial)
 }
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     val n = readLine()!!.trim().toInt()
 
     extraLongFactorials(n)

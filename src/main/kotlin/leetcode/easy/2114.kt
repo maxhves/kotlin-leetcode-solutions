@@ -32,7 +32,7 @@ private fun main() {
 /**
  * Initial attempt
  */
-fun mostWordsFound(sentences: Array<String>): Int {
+private fun mostWordsFound(sentences: Array<String>): Int {
     val wordArrays = sentences.map { it.split(" ") }
     val maxOf = wordArrays.maxOf { it.size }
 
@@ -43,7 +43,7 @@ fun mostWordsFound(sentences: Array<String>): Int {
 /**
  * Revised attempt
  */
-fun mostWordsFoundRevised(sentences: Array<String>): Int {
+private fun mostWordsFoundRevised(sentences: Array<String>): Int {
     val maxCount = sentences.maxOf { sentence -> sentence.count { it == ' ' } } + 1
     println("The highest word count is: $maxCount")
     return maxCount

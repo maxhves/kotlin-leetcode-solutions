@@ -1,6 +1,6 @@
 package hackerrank.easy
 
-fun countApplesAndOranges(
+private fun countApplesAndOranges(
     s: Int, // House start
     t: Int, // House end
     a: Int, // Apple tree
@@ -43,7 +43,7 @@ fun countApplesAndOranges(
     println(orangeInHouseCount)
 }
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     val first_multiple_input = readLine()!!.trimEnd().split(" ")
 
     val s = first_multiple_input[0].toInt()

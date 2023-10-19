@@ -39,7 +39,7 @@ private fun main() {
     decodeMessage(key = "eljuxhpwnyrdgtqkviszcfmabo", message = "zwx hnfx lqantp mnoeius ycgk vcnjrdb")
 }
 
-fun decodeMessage(key: String, message: String): String {
+private fun decodeMessage(key: String, message: String): String {
     val map = HashMap<Char, Char>()
     var currentChar = 'a'
 

@@ -16,7 +16,7 @@ private fun main() {
 
 }
 
-fun searchRange(nums: IntArray, target: Int): IntArray {
+private fun searchRange(nums: IntArray, target: Int): IntArray {
     val answer = intArrayOf(-1, -1)
 
     val start = getIndexOfTarget(nums, target, true)
@@ -28,7 +28,7 @@ fun searchRange(nums: IntArray, target: Int): IntArray {
     return answer
 }
 
-fun getIndexOfTarget(nums: IntArray, target: Int, findStartIndex: Boolean): Int {
+private fun getIndexOfTarget(nums: IntArray, target: Int, findStartIndex: Boolean): Int {
     var answer = -1
     var start = 0
     var end = nums.lastIndex

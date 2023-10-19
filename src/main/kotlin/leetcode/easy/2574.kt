@@ -40,7 +40,7 @@ private fun main() {
     leftRightDifference(nums = intArrayOf(1))
 }
 
-fun leftRightDifference(nums: IntArray): IntArray {
+private fun leftRightDifference(nums: IntArray): IntArray {
     val arraySize = nums.size
     val leftSum = IntArray(arraySize)
     val rightSum = IntArray(arraySize)

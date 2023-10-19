@@ -33,7 +33,7 @@ private fun main() {
     cellsInRange(s = "A1:F1")
 }
 
-fun cellsInRange(s: String): List<String> {
+private fun cellsInRange(s: String): List<String> {
     val upperCol = s[0]
     val lowerCol = s[3]
     val upperRow = s[1]

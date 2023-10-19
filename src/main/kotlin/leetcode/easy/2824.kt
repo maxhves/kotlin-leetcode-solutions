@@ -28,7 +28,7 @@ private fun main() {
     countPairs(nums = listOf(-6, 2, 5, -2, -7, -1, 3), target = -2)
 }
 
-fun countPairs(nums: List<Int>, target: Int): Int {
+private fun countPairs(nums: List<Int>, target: Int): Int {
     var successfulPairCount = 0
 
     for (i in nums.indices) {

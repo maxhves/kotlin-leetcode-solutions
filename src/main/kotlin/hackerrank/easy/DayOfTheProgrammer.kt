@@ -1,6 +1,6 @@
 package hackerrank.easy
 
-fun dayOfProgrammer(year: Int): String {
+private fun dayOfProgrammer(year: Int): String {
     // 1700 - 2700
     // 256th day of the year
     // 1700 - 1917: julian cal
@@ -28,7 +28,7 @@ fun dayOfProgrammer(year: Int): String {
     return "$dayInSeptember.09.$year"
 }
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     val year = readLine()!!.trim().toInt()
 
     val result = dayOfProgrammer(year)

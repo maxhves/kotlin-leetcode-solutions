@@ -2,7 +2,7 @@ package hackerrank
 
 import java.util.Stack
 
-class Queue() {
+private class Queue() {
     private val inputStack = Stack<String>()
     private val outputStack = Stack<String>()
 
@@ -25,7 +25,7 @@ class Queue() {
     }
 }
 
-sealed class Query {
+private sealed class Query {
     data class Enqueue(val element: String) : Query()
     object Dequeue : Query()
     object Peek : Query()
@@ -44,7 +44,7 @@ sealed class Query {
     }
 }
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     // Thoughts
     // Two stacks?
     // Process a number of queries *q*

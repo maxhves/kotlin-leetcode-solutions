@@ -2,7 +2,7 @@ package leetcode.easy
 
 import java.util.Arrays
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     differenceOfSum(intArrayOf(1, 15, 6, 3))
 }
 

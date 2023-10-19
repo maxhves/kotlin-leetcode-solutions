@@ -3,7 +3,7 @@ package hackerrank.easy
 import kotlin.math.abs
 
 // Initial attempt
-fun minimumAbsoluteDifference(arr: Array<Int>): Int {
+private fun minimumAbsoluteDifference(arr: Array<Int>): Int {
     // 5
     // 1 -3 71 68 17
 
@@ -24,7 +24,7 @@ fun minimumAbsoluteDifference(arr: Array<Int>): Int {
     return min
 }
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     val n = readLine()!!.trim().toInt()
 
     val arr = readLine()!!.trimEnd().split(" ").map{ it.toInt() }.toTypedArray()

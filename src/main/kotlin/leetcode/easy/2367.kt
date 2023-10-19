@@ -33,7 +33,7 @@ private fun main() {
     arithmeticTriplets(nums = intArrayOf(4, 5, 6, 7, 8, 9), diff = 2)
 }
 
-fun arithmeticTriplets(nums: IntArray, diff: Int): Int {
+private fun arithmeticTriplets(nums: IntArray, diff: Int): Int {
     var answerCount = 0
     var midpoint = 1
 

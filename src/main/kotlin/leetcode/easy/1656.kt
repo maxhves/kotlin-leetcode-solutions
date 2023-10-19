@@ -36,7 +36,7 @@ private fun main() {
     println(orderedStream.insert(4, "ddddd").joinToString())
 }
 
-class OrderedStream(val n: Int) {
+private class OrderedStream(val n: Int) {
     private val hashMap = HashMap<Int, String>()
     private var pointer: Int = 1
 

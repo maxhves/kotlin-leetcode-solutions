@@ -39,7 +39,7 @@ private fun main() {
     insertGreatestCommonDivisors(head = listNode)
 }
 
-fun insertGreatestCommonDivisors(head: ListNode?): ListNode? {
+private fun insertGreatestCommonDivisors(head: ListNode?): ListNode? {
     fun gcd(a: Int, b: Int): Int {
         var x = a
         var y = b

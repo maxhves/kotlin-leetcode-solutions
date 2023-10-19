@@ -3,7 +3,7 @@ package hackerrank.easy
 import java.util.*
 
 // Initial solution
-fun gradingStudents(grades: Array<Int>): Array<Int> {
+private fun gradingStudents(grades: Array<Int>): Array<Int> {
     val mutableGrades = grades.toMutableList()
 
     for (i in mutableGrades.indices) {
@@ -23,7 +23,7 @@ fun gradingStudents(grades: Array<Int>): Array<Int> {
 }
 
 // Improved solution
-fun gradingStudents2(grades: Array<Int>): Array<Int> {
+private fun gradingStudents2(grades: Array<Int>): Array<Int> {
     val adjustedGrades = grades.map { grade ->
         if (grade < 38 || grade % 5 < 3) {
             grade
@@ -34,7 +34,7 @@ fun gradingStudents2(grades: Array<Int>): Array<Int> {
     return adjustedGrades.toTypedArray()
 }
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     val gradesCount = readLine()!!.trim().toInt()
 
     val grades = Array<Int>(gradesCount, { 0 })

@@ -39,7 +39,7 @@ private fun main() {
 /**
  * Initial solution.
  */
-fun groupThePeople(groupSizes: IntArray): List<List<Int>> {
+private fun groupThePeople(groupSizes: IntArray): List<List<Int>> {
     val hashMap = HashMap<Int, MutableList<Int>>(groupSizes.size)
     val groupedGroups = mutableListOf<List<Int>>()
 
@@ -77,7 +77,7 @@ fun groupThePeople(groupSizes: IntArray): List<List<Int>> {
 /**
  * Better solution.
  */
-fun groupThePeopleBetter(groupSizes: IntArray): List<List<Int>> {
+private fun groupThePeopleBetter(groupSizes: IntArray): List<List<Int>> {
     val map = HashMap<Int, ArrayList<Int>>()
     val result = ArrayList<List<Int>>()
 

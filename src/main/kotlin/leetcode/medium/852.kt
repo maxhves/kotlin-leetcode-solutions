@@ -41,7 +41,7 @@ private fun main() {
     peakIndexInMountainArray(arr = intArrayOf(3, 4, 5, 1))
 }
 
-fun peakIndexInMountainArray(arr: IntArray): Int {
+private fun peakIndexInMountainArray(arr: IntArray): Int {
     var start = 0
     var end = arr.lastIndex
 

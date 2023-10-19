@@ -2,7 +2,7 @@ package hackerrank.medium
 
 import java.util.*
 
-fun climbingLeaderboard(ranked: Array<Int>, player: Array<Int>): Array<Int> {
+private fun climbingLeaderboard(ranked: Array<Int>, player: Array<Int>): Array<Int> {
     // Get list of unique items (no duplicates)
     val scores = ranked.distinct()
 
@@ -20,7 +20,7 @@ fun climbingLeaderboard(ranked: Array<Int>, player: Array<Int>): Array<Int> {
     return newScores.toTypedArray()
 }
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     val rankedCount = readLine()!!.trim().toInt()
 
     val ranked = readLine()!!.trimEnd().split(" ").map{ it.toInt() }.toTypedArray()

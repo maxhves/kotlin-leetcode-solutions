@@ -2,7 +2,7 @@ package hackerrank.easy
 
 import java.math.BigInteger
 
-fun taumBday(b: Int, w: Int, bc: Int, wc: Int, z: Int): Long {
+private fun taumBday(b: Int, w: Int, bc: Int, wc: Int, z: Int): Long {
     // b: number of b gifts
     // w: number of w gifts
     // bc: cost of b
@@ -20,7 +20,7 @@ fun taumBday(b: Int, w: Int, bc: Int, wc: Int, z: Int): Long {
     return (bCs * b) + (wCs * w)
 }
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     val t = readLine()!!.trim().toInt()
 
     for (tItr in 1..t) {

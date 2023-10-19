@@ -32,7 +32,7 @@ private fun main() {
     checkTree(null)
 }
 
-fun checkTree(root: TreeNode?): Boolean {
+private fun checkTree(root: TreeNode?): Boolean {
     if (root == null) {
         return false
     }

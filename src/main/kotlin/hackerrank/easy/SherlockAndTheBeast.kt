@@ -1,6 +1,6 @@
 package hackerrank.easy
 
-fun decentNumber(n: Int): Unit {
+private fun decentNumber(n: Int): Unit {
     // Decent number rules:
     // - It's digits can only be 3's and/or 5's
     // - The number of 3s is divisible by 5
@@ -28,7 +28,7 @@ fun decentNumber(n: Int): Unit {
     }
 }
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     val t = readLine()!!.trim().toInt()
 
     for (tItr in 1..t) {

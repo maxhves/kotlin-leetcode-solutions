@@ -1,6 +1,6 @@
 package hackerrank.easy
 
-fun sockMerchant(n: Int, ar: Array<Int>): Int {
+private fun sockMerchant(n: Int, ar: Array<Int>): Int {
     // Create an array of 0 - 100
     // Increment index of sock type
     val sockPairArray = IntArray(101)
@@ -21,7 +21,7 @@ fun sockMerchant(n: Int, ar: Array<Int>): Int {
 }
 
 // Improved solution
-fun sockMerchant2(n: Int, ar: Array<Int>): Int {
+private fun sockMerchant2(n: Int, ar: Array<Int>): Int {
     val set = HashSet<Int>()
     var pairs = 0
 
@@ -37,7 +37,7 @@ fun sockMerchant2(n: Int, ar: Array<Int>): Int {
     return pairs
 }
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     val n = readLine()!!.trim().toInt()
 
     val ar = readLine()!!.trimEnd().split(" ").map{ it.toInt() }.toTypedArray()

@@ -1,6 +1,6 @@
 package hackerrank
 
-fun caesarCipher(s: String, k: Int): String {
+private fun caesarCipher(s: String, k: Int): String {
     // s - the input string
     // k - the alphabet rotation factor
     val sanitizedFactor = k % 26
@@ -27,7 +27,7 @@ fun caesarCipher(s: String, k: Int): String {
     return encryptedString
 }
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     val n = readLine()!!.trim().toInt()
 
     val s = readLine()!!

@@ -1,6 +1,6 @@
 package hackerrank
 
-fun birthdayCakeCandles(candles: Array<Int>): Int {
+private fun birthdayCakeCandles(candles: Array<Int>): Int {
     // Take max
     val tallest = candles.max()
 
@@ -8,7 +8,7 @@ fun birthdayCakeCandles(candles: Array<Int>): Int {
     return candles.count { it == tallest }
 }
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     val candlesCount = readLine()!!.trim().toInt()
 
     val candles = readLine()!!.trimEnd().split(" ").map{ it.toInt() }.toTypedArray()

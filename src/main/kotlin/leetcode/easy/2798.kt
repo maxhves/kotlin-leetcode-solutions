@@ -36,7 +36,7 @@ private fun main() {
     numberOfEmployeesWhoMetTarget(hours = intArrayOf(5, 1, 4, 2, 2), target = 6)
 }
 
-fun numberOfEmployeesWhoMetTarget(hours: IntArray, target: Int): Int {
+private fun numberOfEmployeesWhoMetTarget(hours: IntArray, target: Int): Int {
     val validEmployees = hours.count { it >= target }
 
     println("Number of employees with valid worked hours: $validEmployees")

@@ -2,7 +2,7 @@ package hackerrank
 
 import java.util.*
 
-class Editor {
+private class Editor {
     private val textStack = Stack<String>()
 
     fun append(text: String) {
@@ -31,7 +31,7 @@ class Editor {
     }
 }
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     // 4 operations
     // - Append string W to the end of S
     // - Delete the last k character S

@@ -1,6 +1,6 @@
 package hackerrank.easy
 
-fun divisibleSumPairs(n: Int, k: Int, ar: Array<Int>): Int {
+private fun divisibleSumPairs(n: Int, k: Int, ar: Array<Int>): Int {
     // Determine the number of pairs in *ar* that are divisible by *k*
     // - i < j
     // - ar[i] + ar[j]
@@ -22,7 +22,7 @@ fun divisibleSumPairs(n: Int, k: Int, ar: Array<Int>): Int {
     return pairs
 }
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     val first_multiple_input = readLine()!!.trimEnd().split(" ")
 
     val n = first_multiple_input[0].toInt()

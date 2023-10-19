@@ -1,10 +1,10 @@
 package hackerrank.easy
 
-fun getTotalX(a: Array<Int>, b: Array<Int>): Int {
+private fun getTotalX(a: Array<Int>, b: Array<Int>): Int {
     return 0
 }
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     val first_multiple_input = readLine()!!.trimEnd().split(" ")
 
     val n = first_multiple_input[0].toInt()

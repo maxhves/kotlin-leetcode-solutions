@@ -1,6 +1,6 @@
 package leetcode.easy
 
-fun main(args: Array<String>) {
+private fun main(args: Array<String>) {
     convertTemperature(36.50)
 }
 

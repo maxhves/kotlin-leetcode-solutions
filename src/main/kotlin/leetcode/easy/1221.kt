@@ -34,7 +34,7 @@ private fun main() {
     balancedStringSplitAlternative(s = "RLRRRLLRLL")
 }
 
-fun balancedStringSplit(s: String): Int {
+private fun balancedStringSplit(s: String): Int {
     var validSubstringCount = 0
     val stack = Stack<Char>()
 
@@ -58,7 +58,7 @@ fun balancedStringSplit(s: String): Int {
     return validSubstringCount
 }
 
-fun balancedStringSplitAlternative(s: String): Int {
+private fun balancedStringSplitAlternative(s: String): Int {
     var rCounter = 0
     var lCounter = 0
     var validSubstring = 0
