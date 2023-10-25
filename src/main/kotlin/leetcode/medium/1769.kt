@@ -54,7 +54,7 @@ import kotlin.math.abs
 
 private fun main() {
     // Output: [1, 1, 3]
-    // minOperations(boxes = "110")
+    minOperations(boxes = "110")
 
     // Output: [11, 8, 5, 4, 3, 4]
     minOperations(boxes = "001011")
