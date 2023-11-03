@@ -36,7 +36,11 @@ package leetcode.easy
 //region Solution
 
 private fun main() {
+    // Output: 3
+    countPrefixes(words = arrayOf("a", "b", "c", "ab", "bc", "abc"), s = "abc")
 
+    // Output: 2
+    countPrefixes(words = arrayOf("a", "a"), s = "aa")
 }
 
 private fun countPrefixes(words: Array<String>, s: String): Int {
