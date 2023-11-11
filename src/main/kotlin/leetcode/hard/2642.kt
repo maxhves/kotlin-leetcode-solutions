@@ -1,5 +1,9 @@
 package leetcode.hard
 
+import java.util.*
+import kotlin.collections.HashMap
+import kotlin.collections.HashSet
+
 //region Problem
 
 /**
@@ -20,7 +24,7 @@ package leetcode.hard
 //region Steps to solve
 
 /**
- *
+ * ...
  */
 
 //endregion
@@ -44,16 +48,25 @@ private fun main() {
     println(graph.shortestPath(0, 3))
 }
 
-private class Graph(n: Int, edges: Array<IntArray>) {
-    var graphEdges = edges.toMutableList()
+private class Graph(n: Int, edges: Array<IntArray>) : HashMap<Int, MutableList<IntArray>>() {
+    init { for (e in edges) addEdge(e) }
 
     fun addEdge(edge: IntArray) {
-        graphEdges.add(edge)
+        getOrPut(edge[0]) { mutableListOf() } += edge
     }
 
-    fun shortestPath(node1: Int, node2: Int): Int {
-        return 0
-    }
+    fun shortestPath(node1: Int, node2: Int): Int =
+        with(PriorityQueue<Pair<Int, Int>>(compareBy { it.second })) {
+            add(node1 to 0)
+            val visited = HashSet<Int>()
+            while (isNotEmpty()) {
+                val (n, wp) = poll()
+                if (n == node2) return@with wp
+                if (visited.add(n))
+                    get(n)?.onEach { (_, s, w) -> add(s to (w + wp))}
+            }
+            -1
+        }
 }
 
 //endregion
