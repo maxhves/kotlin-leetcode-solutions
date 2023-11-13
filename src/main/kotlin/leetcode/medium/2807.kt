@@ -1,5 +1,7 @@
 package leetcode.medium
 
+import leetcode.common.ListNode
+
 //region Problem
 
 /**
@@ -25,10 +27,6 @@ package leetcode.medium
 //endregion
 
 //region Solution
-
-class ListNode(var `val`: Int) {
-    var next: ListNode? = null
-}
 
 private fun main() {
     val listNode = ListNode(18)
