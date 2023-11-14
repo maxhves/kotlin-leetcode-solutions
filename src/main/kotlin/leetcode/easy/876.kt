@@ -1,5 +1,6 @@
 package leetcode.easy
 
+import leetcode.common.LinkedList
 import leetcode.common.ListNode
 
 //region Problem
@@ -34,19 +35,10 @@ import leetcode.common.ListNode
 //region Solution
 
 private fun main() {
-    val root = ListNode(1)
-    val nodeTwo = ListNode(2)
-    val nodeThree = ListNode(3)
-    val nodeFour = ListNode(4)
-    val nodeFive = ListNode(5)
-    val nodeSix = ListNode(6)
-    root.next = nodeTwo
-    nodeTwo.next = nodeThree
-    nodeThree.next = nodeFour
-    nodeFour.next = nodeFive
-    nodeFive.next = nodeSix
+    val linkedList = LinkedList(1, 2, 3, 4, 5, 6)
 
-    middleNode(root)
+    // Output: [4, 5, 6]
+    middleNode(linkedList.head)
 }
 
 private fun middleNode(head: ListNode?): ListNode? {
