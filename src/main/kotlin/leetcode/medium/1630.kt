@@ -68,30 +68,22 @@ private fun main() {
 }
 
 private fun checkArithmeticSubarrays(nums: IntArray, l: IntArray, r: IntArray): List<Boolean> {
-    val answer = arrayListOf<Boolean>()
+    val answer = mutableListOf<Boolean>()
 
     for (i in l.indices) {
-        val start = l[i]
-        val end = r[i]
+        val queryRange = nums.copyOfRange(l[i], r[i] + 1)
+        queryRange.sort()
 
-        val currentRange = arrayListOf<Int>()
-        for (j in start .. end) {
-            currentRange.add(nums[j])
-        }
+        val difference = abs(queryRange[1] - queryRange[0])
+        var isArithmetic = true
 
-        currentRange.sort()
-        val desiredDifferences = abs(currentRange[1] - currentRange[0])
-        var rangeIsArithmetic = true
-        for (k in 0 until currentRange.lastIndex) {
-            val current = currentRange[k]
-            val next = currentRange[k + 1]
-
-            if (abs(current - next) != desiredDifferences) {
-                rangeIsArithmetic = false
+        for (j in 0 until queryRange.lastIndex) {
+            if (abs(queryRange[j] - queryRange[j + 1]) != difference) {
+                isArithmetic = false
                 break
             }
         }
-        answer.add(rangeIsArithmetic)
+        answer.add(isArithmetic)
     }
 
     return answer
