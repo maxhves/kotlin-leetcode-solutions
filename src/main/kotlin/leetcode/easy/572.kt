@@ -27,8 +27,8 @@ import leetcode.common.TreeNode
  *     - Return true if they are both equal, else false.
  * - Call (isSameTree());
  *   - If it is true, return true.
- *   - If it is false, call (isSameTree()) for the left and right children.
- *   - If (isSameTree(left)) or (isSameTree(right)) return true else false.
+ *   - If it is false, call (isSubtree()) for the left and right children.
+ *   - If (isSubtree(left)) or (isSubtree(right)) return true else false.
  */
 
 //endregion
@@ -47,8 +47,8 @@ private fun isSubtree(root: TreeNode?, subRoot: TreeNode?): Boolean {
         return true
     }
 
-    val leftIsSubtree = isSameTree(root.left, subRoot)
-    val rightIsSubtree = isSameTree(root.right, subRoot)
+    val leftIsSubtree = isSubtree(root.left, subRoot)
+    val rightIsSubtree = isSubtree(root.right, subRoot)
 
     return leftIsSubtree || rightIsSubtree
 }
