@@ -14,9 +14,11 @@ import leetcode.common.TreeNode
 
 /**
  * Steps
- * - Call a function to recursively traverse each tree node.
- * - Left first, and then right.
- * - After the traversal calls, set the current nodes' left node to right and vice versa.
+ * - Use DFS to traverse down the tree.
+ * - Use a recursive function to visit each node.
+ * - First visit the left child, then the right child.
+ * - Then set (node.left) to (node.right) and vice versa.
+ * - Can we change the order of when we swap the nodes?
  */
 
 //endregion
@@ -45,20 +47,14 @@ private fun main() {
 private fun invertTree(root: TreeNode?): TreeNode? {
     root ?: return null
 
-    inorderTraverse(root)
+    val tempNode = root.left
+    root.left = root.right
+    root.right = tempNode
+
+    invertTree(root.left)
+    invertTree(root.right)
 
     return root
-}
-
-private fun inorderTraverse(node: TreeNode?) {
-    node ?: return
-
-    inorderTraverse(node.left)
-    inorderTraverse(node.right)
-
-    val temp: TreeNode? = node.left
-    node.left = node.right
-    node.right = temp
 }
 
 //endregion
