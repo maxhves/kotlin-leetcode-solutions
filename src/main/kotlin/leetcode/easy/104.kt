@@ -16,18 +16,17 @@ import leetcode.common.TreeNode
 //region Steps to solve
 
 /**
- * Considerations:
- *  - We should find the longest path in the binary tree.
- *
- * 1. Check if the root is null, if so; return 0.
- * 2. Initialise a (leftCount), and (rightCount) variable, both at 1.
- *     - 1 accounts for the node we are currently at.
- * 3. If the (root.left) node is not null then (leftCount) should be set to:
- *     - 1 + (maxDepth()) recursive call.
- *        - This ultimately returns the max of the (leftCount) and (rightCount).
- * 4. If the (root.right) node is not null then (rightCount) should be set to:
- *     - 1 + (maxDepth()) recursive call.
- * 5. Ultimately we will return the max of (leftCount, rightCount).
+ * Steps
+ * - Create a recursive depth first search function (dfs(node): Int).
+ * - If the passed-in node is null, return 0.
+ * - Create an Int value (left) set to (dfs(node.left)).
+ * - Create an Int value (right) set to (dfs(node.right)).
+ * - Return in the recursive function, the max value of (left, right) plus (1).
+ *   - We want to always know what is the maximum path of a given node, since we are only ever interested
+ *     in what the longest path is.
+ *   - We also must account for the current node, and therefore we plus (1) onto the result of
+ *     (max(left, right) which will give us the new depth for the current node.
+ * - Ultimately, return the (dfs()) function, passing in (root) as the parameter.
  */
 
 //endregion
@@ -50,22 +49,16 @@ private fun main() {
 }
 
 private fun maxDepth(root: TreeNode?): Int {
-    if (root == null) {
-        return 0
+    fun dfs(node: TreeNode?): Int {
+        node ?: return 0
+
+        val left = dfs(node.left)
+        val right = dfs(node.right)
+
+        return 1 + (maxOf(left, right))
     }
 
-    var leftCount = 1
-    var rightCount = 1
-
-    if (root.left != null) {
-        leftCount = 1 + maxDepth(root.left)
-    }
-
-    if (root.right != null) {
-        rightCount = 1 + maxDepth(root.right)
-    }
-
-    return maxOf(leftCount, rightCount)
+    return dfs(root)
 }
 
 //endregion
