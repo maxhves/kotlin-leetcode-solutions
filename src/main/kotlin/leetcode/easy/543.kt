@@ -18,18 +18,15 @@ import leetcode.common.TreeNode
 //region Steps to solve
 
 /**
+ * Considerations
+ * - For each node, we want to find the diameter and the height.
+ * - Height: the max of it's left and right children heights.
+ * - Diameter: take the height of the left child, plus the height of the right child plus two
+ *   (for each child).
+ *   - Note: null nodes have a height of -1.
+ *
  * Steps
- * - Initialize an Int (result) to keep track of the greatest diameter that we find.
- * - Create an inner function (dfs(root)):
- *   - If the (root) node is null, return (-1); this is our base case.
- *   - Initialize an Int (left) which will recursively call (dfs) on the left node.
- *   - Initialize an Int (right) which will recursively call (dfs) on the right node.
- *   - Calculate the (diameter) after traversing the (left) and (right) nodes:
- *     - The diameter will be 2 + (left) + (right).
- *     - Set (result) to the max of (result) and (diameter).
- *     - Return 1 + the max of (left) and (right); this is the height of the current node.
- * - Call the (dfs) function, passing in the root node as an argument.
- * - Ultimately return (result).
+ * -
  */
 
 //endregion
@@ -52,23 +49,25 @@ private fun main() {
 }
 
 private fun diameterBinaryTree(root: TreeNode?): Int {
-    var result = 0
+    var maxDiameter = 0
 
-    fun dfs(root: TreeNode?): Int {
-        root ?: return -1
+    fun dfs(node: TreeNode?): Int {
+        node ?: return -1
 
-        val left = dfs(root.left)
-        val right = dfs(root.right)
+        val left = dfs(node.left)
+        val right = dfs(node.right)
 
-        val diameter = 2 + left + right
-        result = maxOf(result, diameter)
+        val diameter = (left + right) + 2
+        val height = maxOf(left, right) + 1
 
-        return 1 + maxOf(left, right)
+        maxDiameter = maxOf(diameter, maxDiameter)
+
+        return height
     }
 
     dfs(root)
 
-    return result
+    return maxDiameter
 }
 
 //endregion
