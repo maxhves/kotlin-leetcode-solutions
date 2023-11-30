@@ -39,9 +39,15 @@ private fun isBalanced(root: TreeNode?): Boolean {
 
         val left = dfs(node.left)
         val right = dfs(node.right)
-        val balanced = left.first && right.first && abs(left.second - right.second) <= 1
 
-        return balanced to 1 + max(left.second, right.second)
+        val height = maxOf(left.second, right.second) + 1
+        val balanced = abs(left.second - right.second) <= 1
+
+        return if (!left.first || !right.first) {
+            false to height
+        } else {
+            balanced to height
+        }
     }
 
     return dfs(root).first
