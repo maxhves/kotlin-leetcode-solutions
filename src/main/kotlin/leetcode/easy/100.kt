@@ -16,11 +16,12 @@ import leetcode.common.TreeNode
 //region Steps to solve
 
 /**
- * Considerations
- * - Using a loop, we could iterate over all the nodes, inorder.
- * - We can use one loop for (p) and one for (q).
- * - In between each left and right traversal, we can compare the node values.
- * - If the node values aren't equal, then the trees are not the same, and we can return false.
+ * Steps
+ * - Check is (p) and (q) are null, this is the base case, return (true) if so.
+ * - Return:
+ *   - Value of (p) and (q) are equal.
+ *   - Recursive call to (isSameTree()) for left children.
+ *   - Recursive vall to (isSameTree()) for right children.
  */
 
 //endregion
