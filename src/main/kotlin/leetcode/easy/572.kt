@@ -40,17 +40,20 @@ private fun main() {
 }
 
 private fun isSubtree(root: TreeNode?, subRoot: TreeNode?): Boolean {
-    subRoot ?: return true
-    root ?: return false
+    if (subRoot == null) {
+        return true
+    } else if (root == null) {
+        return false
+    }
 
     if (isSameTree(root, subRoot)) {
         return true
+    } else {
+        val isSameLeft = isSubtree(root.left, subRoot)
+        val isSameRight = isSubtree(root.right, subRoot)
+
+        return isSameLeft || isSameRight
     }
-
-    val leftIsSubtree = isSubtree(root.left, subRoot)
-    val rightIsSubtree = isSubtree(root.right, subRoot)
-
-    return leftIsSubtree || rightIsSubtree
 }
 
 private fun isSameTree(root: TreeNode?, subRoot: TreeNode?): Boolean {
@@ -58,14 +61,14 @@ private fun isSameTree(root: TreeNode?, subRoot: TreeNode?): Boolean {
         return true
     }
 
-    if (root != null && subRoot != null && root.`val` == subRoot.`val`) {
-        val leftIsSame = isSameTree(root.left, subRoot.left)
-        val rightIsSame = isSameTree(root.right, subRoot.right)
+    if (root?.`val` == subRoot?.`val`) {
+        val left = isSameTree(root?.left, subRoot?.left)
+        val right = isSameTree(root?.right, subRoot?.right)
 
-        return leftIsSame && rightIsSame
+        return left && right
+    } else {
+        return false
     }
-
-    return false
 }
 
 //endregion
