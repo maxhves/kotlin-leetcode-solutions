@@ -1,5 +1,6 @@
-package leetcode.easy
+package leetcode.medium
 
+import leetcode.common.BinarySearchTree
 import leetcode.common.TreeNode
 
 //region Problem
@@ -26,40 +27,31 @@ import leetcode.common.TreeNode
 //region Solution
 
 private fun main() {
-    val root = TreeNode(3)
-    val one = TreeNode(1)
-    val two = TreeNode(2)
-    val four = TreeNode(4)
-
-    root.left = one
-    root.right = four
-    one.right = two
-
-    kthSmallest(root = root, k = 1)
+    val tree = BinarySearchTree(3, 1, 2, 4)
+    kthSmallest(root = tree.root, k = 1)
 }
-
-var count = 1
-var result = -1
 
 private fun kthSmallest(root: TreeNode?, k: Int): Int {
+    var result = -1
     root ?: return result
 
-    inorderTraverse(root, k)
+    var count = 1
+    fun inorderTraversal(node: TreeNode?) {
+        node ?: return
+
+        inorderTraversal(node.left)
+
+        if (count == k) {
+            result = node.`val`
+        }
+        count++
+
+        inorderTraversal(node.right)
+    }
+
+    inorderTraversal(root)
 
     return result
-}
-
-private fun inorderTraverse(node: TreeNode?, k: Int) {
-    node ?: return
-
-    inorderTraverse(node.left, k)
-
-    if (count == k) {
-        result = node.`val`
-    }
-    count++
-
-    inorderTraverse(node.right, k)
 }
 
 //endregion
