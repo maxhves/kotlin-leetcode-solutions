@@ -84,7 +84,7 @@ private class WordDictionary() {
                     currentNode = currentNode.children.getOrDefault(char, TrieNode())
                 }
             }
-            return  currentNode.isWord
+            return currentNode.isWord
         }
         return matchPath(0, root)
     }
