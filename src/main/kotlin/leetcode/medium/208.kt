@@ -35,12 +35,12 @@ private fun main() {
     val t = ""
 }
 
-private class TrieNode() {
-    val children: HashMap<Char, TrieNode> = HashMap(26)
-    var isWord: Boolean = false
-}
-
 private class Trie() {
+    private class TrieNode {
+        val children: HashMap<Char, TrieNode> = HashMap(26)
+        var isWord: Boolean = false
+    }
+
     private val root = TrieNode()
 
     fun insert(word: String) {
