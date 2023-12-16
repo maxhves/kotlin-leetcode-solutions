@@ -38,9 +38,18 @@ private fun main() {
 }
 
 private fun isAnagram(s: String, t: String): Boolean {
-    val sSorted = s.withIndex().associate { it.index to it.value }.values.sorted()
-    val tSorted = t.withIndex().associate { it.index to it.value }.values.sorted()
-    return sSorted == tSorted
+    val sFrequcneies = HashMap<Char, Int>(26)
+    val tFrequcneies = HashMap<Char, Int>(26)
+
+    for (char in s) {
+        sFrequcneies[char] = sFrequcneies.getOrDefault(char, 0) + 1
+    }
+
+    for (char in t) {
+        tFrequcneies[char] = tFrequcneies.getOrDefault(char, 0) + 1
+    }
+
+    return sFrequcneies == tFrequcneies
 }
 
 //endregion
