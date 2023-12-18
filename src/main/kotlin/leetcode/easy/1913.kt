@@ -29,9 +29,24 @@ package leetcode.easy
 //region Steps to solve
 
 /**
- * 1. Sort the array.
- * 2. Select the first two and last two indices.
- * 3. Return the product.
+ * Steps
+ * - Initialize some variables:
+ *   - (largest) to hold the largest value.
+ *   - (secondLargest) to hold the next largest value.
+ *   - (smallest) to hold the smallest value.
+ *   - (secondSmallest) to hold the next smallest value.
+ * - Iterate over the (nums) array and for each element:
+ *   - If it is larger than or equal to (largest):
+ *     - Set (secondLargest) to (largest).
+ *     - Set (largest) to (num).
+ *   - Else if it is larger than (secondLargest):
+ *     - Set (secondLargest) to (num).
+ *   - If it is smaller than or equal to (smallest):
+ *     - Set (secondSmallest) to (smallest).
+ *     - Set (smallest) to (num).
+ *   - Else if it is smaller than (secondSmallest):
+ *     - Set (smallest) to (num).
+ * - Return ((largest) * (secondLargest) - (smallest) * (secondSmallest))
  */
 
 //endregion
@@ -49,14 +64,14 @@ private fun maxProductDifference(nums: IntArray): Int {
     var secondSmallest = Int.MAX_VALUE
 
     for (num in nums) {
-        if (num > largest) {
+        if (num >= largest) {
             secondLargest = largest
             largest = num
         } else if (num > secondLargest) {
             secondLargest = num
         }
 
-        if (num < smallest) {
+        if (num <= smallest) {
             secondSmallest = smallest
             smallest = num
         } else if (num < secondSmallest) {
