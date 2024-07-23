@@ -1,4 +1,4 @@
-# kotlin-algorithm-solutions
+# LeetCode solutions in Kotlin
 
 Solutions to various LeetCode problems, exclusively written in Kotlin. 
 
