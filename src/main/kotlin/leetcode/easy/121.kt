@@ -17,16 +17,9 @@ package leetcode.easy
 //region Steps to solve
 
 /**
- * Considerations:
- *  - We need to find the smallest number and the largest number afterward.
- *
- * 1. Initialize a pointer (left) which will be 0.
- * 2. Create a loop to iterate over the (prices) array.
- * 3. For each element:
- *     - If the current element is smaller than our current minimum, then it is our new minimum.
- *     - We now need to calculate the profit for each position afterward.
- *     - If the profit for the next position is greater than our current profit then it becomes are profit.
- * 3. Ultimately return the best profit so far.
+ * - A brute-force solution is to use a nested loop to check the profit from each possible solution.
+ * - A more efficient solution is to keep track of the minimum value, and calculate the maximum profit at
+ *   each iteration of the array.
  */
 
 //endregion
@@ -39,17 +32,15 @@ private fun main() {
 }
 
 private fun maxProfit(prices: IntArray): Int {
-    var lowestStockPrice = Int.MAX_VALUE
-    var bestProfit = 0
+    var maximumProfit = 0
+    var minimumBuyPrice = prices[0]
 
-    for (i in 0 .. prices.lastIndex) {
-        val element = prices[i]
-
-        lowestStockPrice = minOf(element, lowestStockPrice)
-        bestProfit = maxOf(bestProfit, element - lowestStockPrice)
+    prices.forEach { price ->
+        minimumBuyPrice = minOf(minimumBuyPrice, price)
+        maximumProfit = maxOf(maximumProfit, price - minimumBuyPrice)
     }
 
-    return bestProfit
+    return maximumProfit
 }
 
 //endregion
