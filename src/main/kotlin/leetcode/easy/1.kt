@@ -39,20 +39,19 @@ private fun main() {
 }
 
 private fun twoSum(nums: IntArray, target: Int): IntArray {
-    val hashMap = HashMap<Int, Int>()
+    val occurrences = HashMap<Int, Int>()
 
     nums.forEachIndexed { index, num ->
-        val compliment = target - num
+        val remainder = target - num
 
-        if (hashMap.containsKey(compliment)) {
-            val entry = hashMap[compliment]!!
-            return intArrayOf(index, entry)
-        } else {
-            hashMap[num] = index
+        occurrences[remainder]?.let {
+            return intArrayOf(index, occurrences.getOrDefault(remainder, -1))
         }
+
+        occurrences[num] = index
     }
 
-    return intArrayOf()
+    return intArrayOf(-1, -1)
 }
 
 //endregion
