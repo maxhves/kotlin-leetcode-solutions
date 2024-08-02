@@ -35,14 +35,13 @@ private fun main() {
 }
 
 private fun containsDuplicate(nums: IntArray): Boolean {
-    val hashSet = HashSet<Int>()
+    val seenNumbers = HashSet<Int>()
 
-    for (num in nums) {
-        if (hashSet.contains(num)) {
+    nums.forEach { num ->
+        if (seenNumbers.contains(num)) {
             return true
-        } else {
-            hashSet.add(num)
         }
+        seenNumbers.add(num)
     }
 
     return false
